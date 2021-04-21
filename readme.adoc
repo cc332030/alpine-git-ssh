@@ -1,2 +1,8 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fc332030%2Falpine-git-ssh.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fc332030%2Falpine-git-ssh?ref=badge_shield)
+
 
 = alpine-git-ssh
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fc332030%2Falpine-git-ssh.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fc332030%2Falpine-git-ssh?ref=badge_large)
