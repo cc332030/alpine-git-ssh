@@ -32,8 +32,6 @@ jobs:
         with:
           push: true
           tags: c332030/alpine-git-ssh:latest
-#         when schedule, there is no event
-#         tags: ${{ github.actor }}/${{ github.event.repository.name }}:latest
 
       -
         name: Image digest
