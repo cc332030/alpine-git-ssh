@@ -23,7 +23,7 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ github.actor }}
+          username: c332030
           password: ${{ secrets.DOCKER_TOKEN }}
       -
         name: Build and push
@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ github.repository }}:latest
+          tags: c332030/alpine-git-ssh:latest
 #         when schedule, there is no event
 #         tags: ${{ github.actor }}/${{ github.event.repository.name }}:latest
 
