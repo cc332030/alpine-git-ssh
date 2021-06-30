@@ -26,25 +26,21 @@ jobs:
           username: c332030
           password: ${{ secrets.DOCKER_TOKEN }}
       -
+        name: Log in to GitHub Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: c332030
+          password: ${{ secrets.GITHUB_TOKEN }}
+      -
         id: docker_build
         name: Build and push
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: c332030/alpine-git-ssh:latest
-      -
-        name: Log in to GitHub Docker Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      -
-        name: Build container image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: |
+            c332030/alpine-git-ssh:latest
+            ghcr.io/${{ github.repository }}:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
